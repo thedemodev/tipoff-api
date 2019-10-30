@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+const PORT = process.env.PORT || 8080;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -26,7 +28,6 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-console.log(curry);
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -38,5 +39,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(PORT);
+console.log('Magic happens on PORT ' + PORT);
 
 module.exports = app;

@@ -1,4 +1,5 @@
 const schedule = require('../data/schedule.json');
+const { capitalize, flatten } = require('./helper');
 
 exports.getMonth = (req, res) => {
   const monthParam = capitalize(req.params.month);
@@ -16,11 +17,5 @@ exports.getTeamSchedule = (req, res) => {
     });
   });
 
-  res.json(teamSchedule);
-};
-
-//helper to capitalize string
-const capitalize = s => {
-  if (typeof s !== 'string') return '';
-  return s.charAt(0).toUpperCase() + s.slice(1);
+  res.json(flatten(teamSchedule));
 };

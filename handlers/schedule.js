@@ -9,6 +9,17 @@ exports.getMonth = (req, res) => {
   //   returning one month
   res.json(monthData[0].mscd.g);
 };
+exports.getTeamSchedule = (req, res) => {
+  const teamId = parseInt(req.params.teamId);
+  console.log(teamId);
+  const teamSchedule = schedule.lscd.map(month => {
+    return month.mscd.g.filter(g => {
+      return g.v.tid === teamId || g.h.tid === teamId;
+    });
+  });
+
+  res.json(teamSchedule);
+};
 
 //helper to capitalize string
 const capitalize = s => {

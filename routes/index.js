@@ -10,6 +10,6 @@ router.get('/', function(req, res, next) {
 
 // get schedule of a given month
 router.get('/schedule/month/:month', getMonth);
-router.get('/schedule/team/teamId', getTeamSchedule);
+router.get('/schedule/team/:teamId', getTeamSchedule);
 
 module.exports = router;

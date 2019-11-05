@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { getMonth } = require('../handlers/schedule');
+const { getMonth, getTeamSchedule } = require('../handlers/schedule');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 // get schedule of a given month
-router.get('/month/:month', getMonth);
+router.get('/schedule/month/:month', getMonth);
+router.get('/schedule/team/teamId', getTeamSchedule);
 
 module.exports = router;

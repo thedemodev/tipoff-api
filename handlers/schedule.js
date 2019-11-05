@@ -1,9 +1,8 @@
 const schedule = require('../data/schedule.json');
 
 exports.getMonth = (req, res) => {
-  let monthData = {};
   const monthParam = capitalize(req.params.month);
-  monthData = schedule.lscd.filter(month => {
+  const monthData = schedule.lscd.filter(month => {
     return month.mscd.mon === monthParam;
   });
   //   returning one month
@@ -11,7 +10,6 @@ exports.getMonth = (req, res) => {
 };
 exports.getTeamSchedule = (req, res) => {
   const teamId = parseInt(req.params.teamId);
-  console.log(teamId);
   const teamSchedule = schedule.lscd.map(month => {
     return month.mscd.g.filter(g => {
       return g.v.tid === teamId || g.h.tid === teamId;

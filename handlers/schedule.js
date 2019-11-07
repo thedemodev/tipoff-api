@@ -11,6 +11,19 @@ exports.getAllGames = async (req, res) => {
   res.json(flatten(allGames));
 };
 
+exports.getDay = async (req, res) => {
+  const dateParam = req.params.date;
+  const data = await getDate(dateParam);
+  res.json(data);
+};
+
+exports.getToday = async (req, res) => {
+  const today = new Date();
+
+  const data = await getDate(today.toISOString().slice(0, 10));
+  res.json(data);
+};
+
 exports.getMonth = async (req, res) => {
   const liveSchedule = await getLiveSchedule();
   const schedule = pickSchedule(liveSchedule);
@@ -65,6 +78,18 @@ const getLiveSchedule = () => {
       }
       console.log(error.config);
     });
+};
+
+const getDate = async date => {
+  const liveSchedule = await getLiveSchedule();
+  const schedule = pickSchedule(liveSchedule);
+  const dateParam = date;
+  const dateData = schedule.lscd.map(month => {
+    return month.mscd.g.filter(g => {
+      return g.gdte === dateParam;
+    });
+  });
+  return flatten(dateData);
 };
 
 // checks whether object returned from fetch was an actual schedule, or use backup json schedule data

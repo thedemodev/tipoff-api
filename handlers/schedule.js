@@ -2,6 +2,15 @@ const axios = require('axios');
 const backupSchedule = require('../data/schedule.json');
 const { capitalize, flatten } = require('./helper');
 
+exports.getAllGames = async (req, res) => {
+  const liveSchedule = await getLiveSchedule();
+  const schedule = pickSchedule(liveSchedule);
+  const allGames = schedule.lscd.map(month => {
+    return month.mscd.g;
+  });
+  res.json(flatten(allGames));
+};
+
 exports.getMonth = async (req, res) => {
   const liveSchedule = await getLiveSchedule();
   const schedule = pickSchedule(liveSchedule);

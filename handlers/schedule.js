@@ -4,17 +4,7 @@ const { capitalize, flatten } = require('./helper');
 
 exports.getMonth = async (req, res) => {
   const liveSchedule = await getLiveSchedule();
-
-  let schedule;
-
-  if (isLiveAvailable(liveSchedule)) {
-    schedule = liveSchedule;
-    console.log('using online');
-  } else {
-    schedule = backupSchedule;
-    console.log('using backup');
-  }
-
+  const schedule = pickSchedule(liveSchedule);
   const monthParam = capitalize(req.params.month);
   const monthData = schedule.lscd.filter(month => {
     return month.mscd.mon === monthParam;
@@ -22,8 +12,11 @@ exports.getMonth = async (req, res) => {
   //   returning one month
   res.json(monthData[0].mscd.g);
 };
-exports.getTeamSchedule = (req, res) => {
+
+exports.getTeamSchedule = async (req, res) => {
   const teamId = parseInt(req.params.teamId);
+  const liveSchedule = await getLiveSchedule();
+  const schedule = pickSchedule(liveSchedule);
   const teamSchedule = schedule.lscd.map(month => {
     return month.mscd.g.filter(g => {
       return g.v.tid === teamId || g.h.tid === teamId;
@@ -65,11 +58,15 @@ const getLiveSchedule = () => {
     });
 };
 
-// checks whether object returned from fetch was an actual schedule
-const isLiveAvailable = schedule => {
+// checks whether object returned from fetch was an actual schedule, or use backup json schedule data
+const pickSchedule = schedule => {
   if (typeof schedule === 'object') {
-    return Object.keys(schedule).length > 0;
+    if (Object.keys(schedule).length > 0) {
+      console.log('using online schedule');
+      return schedule;
+    }
   } else {
-    return false;
+    console.log('using backup json');
+    return backupSchedule;
   }
 };

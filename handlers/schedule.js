@@ -21,6 +21,7 @@ exports.getToday = async (req, res) => {
   const today = new Date();
 
   const data = await getDate(today.toISOString().slice(0, 10));
+  console.log(`Now: ${today}`);
   res.json(data);
 };
 

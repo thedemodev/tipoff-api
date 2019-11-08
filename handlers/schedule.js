@@ -1,4 +1,8 @@
 const axios = require('axios');
+const dayjs = require('dayjs');
+const timeZone = require('dayjs-ext/plugin/timeZone');
+dayjs.extend(timeZone);
+
 const backupSchedule = require('../data/schedule.json');
 const { capitalize, flatten } = require('./helper');
 
@@ -18,10 +22,8 @@ exports.getDay = async (req, res) => {
 };
 
 exports.getToday = async (req, res) => {
-  const today = new Date();
-  console.log(`Now: ${today}`);
-  console.log(`ISO: ${today.toISOString.slice(0, 10)}`);
-  const data = await getDate(today.toISOString().slice(0, 10));
+  const today = dayjs().format('YYYY-MM-DD', { timeZone: 'America/New_York' });
+  const data = await getDate(today);
   res.json(data);
 };
 

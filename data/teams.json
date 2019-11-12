@@ -4,35 +4,40 @@
     "abbreviation": "ATL",
     "teamName": "Atlanta Hawks",
     "simpleName": "Hawks",
-    "location": "Atlanta"
+    "location": "Atlanta",
+    "teamColor": "#CC092F"
   },
   {
     "teamId": 1610612738,
     "abbreviation": "BOS",
     "teamName": "Boston Celtics",
     "simpleName": "Celtics",
-    "location": "Boston"
+    "location": "Boston",
+    "teamColor": "#007A33"
   },
   {
     "teamId": 1610612751,
     "abbreviation": "BKN",
     "teamName": "Brooklyn Nets",
     "simpleName": "Nets",
-    "location": "Brooklyn"
+    "location": "Brooklyn",
+    "teamColor": "#000000"
   },
   {
     "teamId": 1610612766,
     "abbreviation": "CHA",
     "teamName": "Charlotte Hornets",
     "simpleName": "Hornets",
-    "location": "Charlotte"
+    "location": "Charlotte",
+    "teamColor": "#1D8CAB"
   },
   {
     "teamId": 1610612741,
     "abbreviation": "CHI",
     "teamName": "Chicago Bulls",
     "simpleName": "Bulls",
-    "location": "Chicago"
+    "location": "Chicago",
+    "teamColor": "#BC032B"
   },
   {
     "teamId": 1610612739,

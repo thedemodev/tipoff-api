@@ -12,3 +12,6 @@ exports.getTeamInfo = (req, res) => {
 
   res.json(teamInfo);
 };
+exports.getAllTeams = (req, res) => {
+  res.json(teamData);
+};

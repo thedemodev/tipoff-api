@@ -44,174 +44,199 @@
     "abbreviation": "CLE",
     "teamName": "Cleveland Cavaliers",
     "simpleName": "Cavaliers",
-    "location": "Cleveland"
+    "location": "Cleveland",
+    "teamColor": "#860038"
   },
   {
     "teamId": 1610612742,
     "abbreviation": "DAL",
     "teamName": "Dallas Mavericks",
     "simpleName": "Mavericks",
-    "location": "Dallas"
+    "location": "Dallas",
+    "teamColor": "#00538C"
   },
   {
     "teamId": 1610612743,
     "abbreviation": "DEN",
     "teamName": "Denver Nuggets",
     "simpleName": "Nuggets",
-    "location": "Denver"
+    "location": "Denver",
+    "teamColor": "#FEC524"
   },
   {
     "teamId": 1610612765,
     "abbreviation": "DET",
     "teamName": "Detroit Pistons",
     "simpleName": "Pistons",
-    "location": "Detroit"
+    "location": "Detroit",
+    "teamColor": "#C8102E"
   },
   {
     "teamId": 1610612744,
     "abbreviation": "GSW",
     "teamName": "Golden State Warriors",
     "simpleName": "Warriors",
-    "location": "Golden State"
+    "location": "Golden State",
+    "teamColor": "#FFC72C"
   },
   {
     "teamId": 1610612745,
     "abbreviation": "HOU",
     "teamName": "Houston Rockets",
     "simpleName": "Rockets",
-    "location": "Houston"
+    "location": "Houston",
+    "teamColor": "#CE1141"
   },
   {
     "teamId": 1610612754,
     "abbreviation": "IND",
     "teamName": "Indiana Pacers",
     "simpleName": "Pacers",
-    "location": "Indiana"
+    "location": "Indiana",
+    "teamColor": "#002D62"
   },
   {
     "teamId": 1610612746,
     "abbreviation": "LAC",
     "teamName": "Los Angeles Clippers",
     "simpleName": "Clippers",
-    "location": "Los Angeles"
+    "location": "Los Angeles",
+    "teamColor": "#1D428A"
   },
   {
     "teamId": 1610612747,
     "abbreviation": "LAL",
     "teamName": "Los Angeles Lakers",
     "simpleName": "Lakers",
-    "location": "Los Angeles"
+    "location": "Los Angeles",
+    "teamColor": "#552583"
   },
   {
     "teamId": 1610612763,
     "abbreviation": "MEM",
     "teamName": "Memphis Grizzlies",
     "simpleName": "Grizzlies",
-    "location": "Memphis"
+    "location": "Memphis",
+    "teamColor": "#23375B"
   },
   {
     "teamId": 1610612748,
     "abbreviation": "MIA",
     "teamName": "Miami Heat",
     "simpleName": "Heat",
-    "location": "Miami"
+    "location": "Miami",
+    "teamColor": "#98002E"
   },
   {
     "teamId": 1610612749,
     "abbreviation": "MIL",
     "teamName": "Milwaukee Bucks",
     "simpleName": "Bucks",
-    "location": "Milwaukee"
+    "location": "Milwaukee",
+    "teamColor": "#00471B"
   },
   {
     "teamId": 1610612750,
     "abbreviation": "MIN",
     "teamName": "Minnesota Timberwolves",
     "simpleName": "Timberwolves",
-    "location": "Minnesota"
+    "location": "Minnesota",
+    "teamColor": "#236192"
   },
   {
     "teamId": 1610612740,
     "abbreviation": "NOP",
     "teamName": "New Orleans Pelicans",
     "simpleName": "Pelicans",
-    "location": "New Orleans"
+    "location": "New Orleans",
+    "teamColor": "#85714D"
   },
   {
     "teamId": 1610612752,
     "abbreviation": "NYK",
     "teamName": "New York Knicks",
     "simpleName": "Knicks",
-    "location": "New York"
+    "location": "New York",
+    "teamColor": "#F58426"
   },
   {
     "teamId": 1610612760,
     "abbreviation": "OKC",
     "teamName": "Oklahoma City Thunder",
     "simpleName": "Thunder",
-    "location": "Oklahoma City"
+    "location": "Oklahoma City",
+    "teamColor": "#007AC1"
   },
   {
     "teamId": 1610612753,
     "abbreviation": "ORL",
     "teamName": "Orlando Magic",
     "simpleName": "Magic",
-    "location": "Orlando"
+    "location": "Orlando",
+    "teamColor": "#0077C0"
   },
   {
     "teamId": 1610612755,
     "abbreviation": "PHI",
     "teamName": "Philadelphia 76ers",
     "simpleName": "76ers",
-    "location": "Philadelphia"
+    "location": "Philadelphia",
+    "teamColor": "#006BB6"
   },
   {
     "teamId": 1610612756,
     "abbreviation": "PHX",
     "teamName": "Phoenix Suns",
     "simpleName": "Suns",
-    "location": "Phoenix"
+    "location": "Phoenix",
+    "teamColor": "#27235C"
   },
   {
     "teamId": 1610612757,
     "abbreviation": "POR",
     "teamName": "Portland Trail Blazers",
     "simpleName": "Trail Blazers",
-    "location": "Portland"
+    "location": "Portland",
+    "teamColor": "#E13A3E"
   },
   {
     "teamId": 1610612758,
     "abbreviation": "SAC",
     "teamName": "Sacramento Kings",
     "simpleName": "Kings",
-    "location": "Sacramento"
+    "location": "Sacramento",
+    "teamColor": "#5A2D81"
   },
   {
     "teamId": 1610612759,
     "abbreviation": "SAS",
     "teamName": "San Antonio Spurs",
     "simpleName": "Spurs",
-    "location": "San Antonio"
+    "location": "San Antonio",
+    "teamColor": "#000000"
   },
   {
     "teamId": 1610612761,
     "abbreviation": "TOR",
     "teamName": "Toronto Raptors",
     "simpleName": "Raptors",
-    "location": "Toronto"
+    "location": "Toronto",
+    "teamColor": "#CE1141"
   },
   {
     "teamId": 1610612762,
     "abbreviation": "UTA",
     "teamName": "Utah Jazz",
     "simpleName": "Jazz",
-    "location": "Utah"
+    "location": "Utah",
+    "teamColor": "#002B5C"
   },
   {
     "teamId": 1610612764,
     "abbreviation": "WAS",
     "teamName": "Washington Wizards",
     "simpleName": "Wizards",
-    "location": "Washington"
+    "location": "Washington",
+    "teamColor": "#E31837"
   }
 ]
